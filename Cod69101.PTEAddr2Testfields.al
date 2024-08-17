@@ -1,4 +1,4 @@
-codeunit 69101 "PTE Addr. 2 Testfields"
+codeunit 69102 "PTE Addr. 3 Testfields"
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Release Sales Document", 'OnBeforeReleaseSalesDoc', '', false, false)]
     [ErrorBehavior(ErrorBehavior::Collect)]
@@ -20,7 +20,7 @@ codeunit 69101 "PTE Addr. 2 Testfields"
 
         SalesHeader.TestField("Ship-to Address 2", ErrorInfo.Create());
 
-        SalesHeader.TestField("Bill-to Address 2", ErrorInfo.Create());
+        SalesHeader.TestField("Bill-to Address 2", ErrorInfo.Create('Parameter has to be set to true (collectible), else the error is thrown immediately.', true));
 
         SalesHeader.TestField("Sell-to Address 2", ErrorInfo.Create());
 
